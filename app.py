@@ -30,9 +30,10 @@ def input_pdf_text(uploaded_file):
 #Prompt Template
 
 input_prompt="""
-Hey Act Like a skilled or very experience ATS(Application Tracking System)
-with a deep understanding of tech field,software engineering,data science ,data analyst
-and big data engineer. Your task is to evaluate the resume based on the given job description.
+You are an skilled ATS (Applicant Tracking System) scanner with a deep understanding of ATS functionality, 
+your task is to evaluate the resume against the provided job description. give me the percentage of match if the resume matches
+the job description. First the output should come as percentage and then keywords missing and last final thoughts.
+Highlight the strength and weaknesses if the applicant in relation to the specified job requirements.
 You must consider the job market is very competitive and you should provide 
 best assistance for improving thr resumes. Assign the percentage Matching based 
 on Jd and
@@ -48,6 +49,7 @@ I want the response in one single string having the structure
 st.title("Smart ATS")
 st.header("Application Tracking System (Gemini Pro)")
 st.text("Improve Your Resume ATS")
+role=st.text_area("Enter the role you are applying for.")
 jd=st.text_area("Paste the Job Description")
 uploaded_file=st.file_uploader("Upload Your Resume in PDF Format",type="pdf",help="Please uplaod the pdf")
 
