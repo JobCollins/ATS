@@ -1,0 +1,13 @@
+prefix=/Users/jobdulo/Documents/ATS/gemini
+exec_prefix=/Users/jobdulo/Documents/ATS/gemini
+libdir=/Users/jobdulo/Documents/ATS/gemini/lib
+sharedlibdir=/Users/jobdulo/Documents/ATS/gemini/lib
+includedir=/Users/jobdulo/Documents/ATS/gemini/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
